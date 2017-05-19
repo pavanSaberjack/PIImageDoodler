@@ -8,6 +8,7 @@
 
 #import "PIViewController.h"
 #import "PIDrawingScreenVC.h"
+#import "PIDoodleTableViewCell.h"
 
 static NSString *cellIdentifier = @"DoodleCellIdentifier";
 static NSString *editModeCellIdentifier = @"DoodleEditModeCellIdentifier";
@@ -18,7 +19,6 @@ static NSString *editModeCellIdentifier = @"DoodleEditModeCellIdentifier";
 @property (weak, nonatomic) IBOutlet UITableView *doodlesTableView;
 
 @property (strong, nonatomic) NSMutableArray<Doodle *> *myDoodlesArray;
-@property (nonatomic) BOOL isEditMode;
 @end
 
 @implementation PIViewController
@@ -54,10 +54,8 @@ static NSString *editModeCellIdentifier = @"DoodleEditModeCellIdentifier";
 #pragma mark - Private Interface methods
 - (void)initialSetup
 {
-    self.isEditMode = NO; // Setting default value : Not needed as default value of bool is NO
-    
     // Register table cells
-    [self.doodlesTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdentifier];
+    [self.doodlesTableView registerNib:[UINib nibWithNibName:@"PIDoodleTableViewCell" bundle:nil] forCellReuseIdentifier:cellIdentifier];
 }
 
 #pragma mark - UITableViewDelegate methods
@@ -70,22 +68,17 @@ static NSString *editModeCellIdentifier = @"DoodleEditModeCellIdentifier";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    if (self.isEditMode) {
-        return;
-    }
-    
     // go for Detail
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 90.0f;
+    return self.view.frame.size.width + 50.0f;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
-    return 90.0f;
+    return 30.0f;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
@@ -105,13 +98,9 @@ static NSString *editModeCellIdentifier = @"DoodleEditModeCellIdentifier";
 {
     Doodle *doodleObj = self.myDoodlesArray[indexPath.row];
     UIImage *img = [UIImage imageWithContentsOfFile:[PIHelper imagePathForDoodleWithUniqueId:doodleObj.uniqueId]];
-    if (self.isEditMode) {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:editModeCellIdentifier];
-        return cell;
-    }
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    return  cell;
+    PIDoodleTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:editModeCellIdentifier];
+    cell.doodleImageView.image = img;
+    return cell;
 }
 
 @end

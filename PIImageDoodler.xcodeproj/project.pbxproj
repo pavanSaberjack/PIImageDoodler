@@ -38,6 +38,8 @@
 		8BB483CD1ECECD230001774B /* PIDrawingScreenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB483CC1ECECD230001774B /* PIDrawingScreenVC.m */; };
 		8BB483D01ECEDB400001774B /* PIDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB483CF1ECEDB400001774B /* PIDataManager.m */; };
 		8BB483D31ECEDB990001774B /* PIImageDoodler.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8BB483D11ECEDB990001774B /* PIImageDoodler.xcdatamodeld */; };
+		8BB483D71ECEE2040001774B /* PIDoodleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB483D51ECEE2040001774B /* PIDoodleTableViewCell.m */; };
+		8BB483D81ECEE2040001774B /* PIDoodleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BB483D61ECEE2040001774B /* PIDoodleTableViewCell.xib */; };
 		D38FF9AC411B2BB11A4B33B6 /* libPods-PIImageDoodlerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16BAEBC926D69C43AAE7288C /* libPods-PIImageDoodlerTests.a */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +107,9 @@
 		8BB483CE1ECEDB400001774B /* PIDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PIDataManager.h; sourceTree = "<group>"; };
 		8BB483CF1ECEDB400001774B /* PIDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PIDataManager.m; sourceTree = "<group>"; };
 		8BB483D21ECEDB990001774B /* PIImageDoodler.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PIImageDoodler.xcdatamodel; sourceTree = "<group>"; };
+		8BB483D41ECEE2040001774B /* PIDoodleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PIDoodleTableViewCell.h; sourceTree = "<group>"; };
+		8BB483D51ECEE2040001774B /* PIDoodleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PIDoodleTableViewCell.m; sourceTree = "<group>"; };
+		8BB483D61ECEE2040001774B /* PIDoodleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PIDoodleTableViewCell.xib; sourceTree = "<group>"; };
 		CF0250BE7BCE7F73BE3914AE /* Pods-PIImageDoodlerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PIImageDoodlerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PIImageDoodlerTests/Pods-PIImageDoodlerTests.release.xcconfig"; sourceTree = "<group>"; };
 		FD7C737E3EBB6CEDC83C6B73 /* Pods-PIImageDoodlerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PIImageDoodlerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PIImageDoodlerTests/Pods-PIImageDoodlerTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -340,6 +345,9 @@
 		8BB4837C1ECEB1C90001774B /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				8BB483D41ECEE2040001774B /* PIDoodleTableViewCell.h */,
+				8BB483D51ECEE2040001774B /* PIDoodleTableViewCell.m */,
+				8BB483D61ECEE2040001774B /* PIDoodleTableViewCell.xib */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -542,6 +550,7 @@
 				5857BCDA18C99AC200796BDC /* Images.xcassets in Resources */,
 				8BB483921ECEB5080001774B /* Main.storyboard in Resources */,
 				8BB483941ECEB61D0001774B /* LaunchScreen.storyboard in Resources */,
+				8BB483D81ECEE2040001774B /* PIDoodleTableViewCell.xib in Resources */,
 				8BB4838A1ECEB2810001774B /* PIColorPickerController.xib in Resources */,
 				5857BCCC18C99AC200796BDC /* InfoPlist.strings in Resources */,
 			);
@@ -667,6 +676,7 @@
 				8BB483801ECEB2770001774B /* PIDrawerView.m in Sources */,
 				5857BCD218C99AC200796BDC /* PIAppDelegate.m in Sources */,
 				8BB483981ECEBDC00001774B /* PIHelper.m in Sources */,
+				8BB483D71ECEE2040001774B /* PIDoodleTableViewCell.m in Sources */,
 				8BB483D01ECEDB400001774B /* PIDataManager.m in Sources */,
 				8BB483CD1ECECD230001774B /* PIDrawingScreenVC.m in Sources */,
 				8BB483B41ECEBE9E0001774B /* GTMNSString+HTML.m in Sources */,
