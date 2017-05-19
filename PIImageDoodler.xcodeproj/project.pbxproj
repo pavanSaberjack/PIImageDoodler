@@ -21,7 +21,6 @@
 		5857BCE318C99AC200796BDC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5857BCC518C99AC200796BDC /* UIKit.framework */; };
 		5857BCEB18C99AC200796BDC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5857BCE918C99AC200796BDC /* InfoPlist.strings */; };
 		5857BCED18C99AC200796BDC /* PIImageDoodlerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5857BCEC18C99AC200796BDC /* PIImageDoodlerTests.m */; };
-		5857BCF918C99F0800796BDC /* PIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5857BCF818C99F0800796BDC /* PIViewController.xib */; };
 		5857BD0318C9AE9B00796BDC /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5857BD0218C9AE9B00796BDC /* MobileCoreServices.framework */; };
 		8BB483801ECEB2770001774B /* PIDrawerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB4837F1ECEB2770001774B /* PIDrawerView.m */; };
 		8BB483891ECEB2810001774B /* PIColorPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB483831ECEB2810001774B /* PIColorPickerController.m */; };
@@ -29,6 +28,8 @@
 		8BB4838B1ECEB2810001774B /* PIDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB483871ECEB2810001774B /* PIDrawerViewController.m */; };
 		8BB4838C1ECEB2810001774B /* PIDrawerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BB483881ECEB2810001774B /* PIDrawerViewController.xib */; };
 		8BB483901ECEB2910001774B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB4838F1ECEB2910001774B /* MBProgressHUD.m */; };
+		8BB483921ECEB5080001774B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BB483911ECEB5080001774B /* Main.storyboard */; };
+		8BB483941ECEB61D0001774B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BB483931ECEB61D0001774B /* LaunchScreen.storyboard */; };
 		D38FF9AC411B2BB11A4B33B6 /* libPods-PIImageDoodlerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16BAEBC926D69C43AAE7288C /* libPods-PIImageDoodlerTests.a */; };
 /* End PBXBuildFile section */
 
@@ -63,7 +64,6 @@
 		5857BCE818C99AC200796BDC /* PIImageDoodlerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PIImageDoodlerTests-Info.plist"; sourceTree = "<group>"; };
 		5857BCEA18C99AC200796BDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5857BCEC18C99AC200796BDC /* PIImageDoodlerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PIImageDoodlerTests.m; sourceTree = "<group>"; };
-		5857BCF818C99F0800796BDC /* PIViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PIViewController.xib; sourceTree = "<group>"; };
 		5857BD0218C9AE9B00796BDC /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		5DDD766E8F272F9823941363 /* Pods-PIImageDoodler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PIImageDoodler.release.xcconfig"; path = "Pods/Target Support Files/Pods-PIImageDoodler/Pods-PIImageDoodler.release.xcconfig"; sourceTree = "<group>"; };
 		823565D926152E5B913D5FAC /* Pods-PIImageDoodler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PIImageDoodler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PIImageDoodler/Pods-PIImageDoodler.debug.xcconfig"; sourceTree = "<group>"; };
@@ -77,6 +77,8 @@
 		8BB483881ECEB2810001774B /* PIDrawerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PIDrawerViewController.xib; sourceTree = "<group>"; };
 		8BB4838E1ECEB2910001774B /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		8BB4838F1ECEB2910001774B /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		8BB483911ECEB5080001774B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		8BB483931ECEB61D0001774B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF0250BE7BCE7F73BE3914AE /* Pods-PIImageDoodlerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PIImageDoodlerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PIImageDoodlerTests/Pods-PIImageDoodlerTests.release.xcconfig"; sourceTree = "<group>"; };
 		FD7C737E3EBB6CEDC83C6B73 /* Pods-PIImageDoodlerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PIImageDoodlerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PIImageDoodlerTests/Pods-PIImageDoodlerTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,9 +157,10 @@
 				5857BCD118C99AC200796BDC /* PIAppDelegate.m */,
 				5857BCD618C99AC200796BDC /* PIViewController.h */,
 				5857BCD718C99AC200796BDC /* PIViewController.m */,
-				5857BCF818C99F0800796BDC /* PIViewController.xib */,
 				5857BCD918C99AC200796BDC /* Images.xcassets */,
 				5857BCC818C99AC200796BDC /* Supporting Files */,
+				8BB483911ECEB5080001774B /* Main.storyboard */,
+				8BB483931ECEB61D0001774B /* LaunchScreen.storyboard */,
 			);
 			path = PIImageDoodler;
 			sourceTree = "<group>";
@@ -437,8 +440,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5857BCDA18C99AC200796BDC /* Images.xcassets in Resources */,
-				5857BCF918C99F0800796BDC /* PIViewController.xib in Resources */,
 				8BB4838C1ECEB2810001774B /* PIDrawerViewController.xib in Resources */,
+				8BB483921ECEB5080001774B /* Main.storyboard in Resources */,
+				8BB483941ECEB61D0001774B /* LaunchScreen.storyboard in Resources */,
 				8BB4838A1ECEB2810001774B /* PIColorPickerController.xib in Resources */,
 				5857BCCC18C99AC200796BDC /* InfoPlist.strings in Resources */,
 			);

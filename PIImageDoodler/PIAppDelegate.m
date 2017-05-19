@@ -13,17 +13,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    
-    PIViewController *emptyVC = [[PIViewController alloc] initWithNibName:@"PIViewController" bundle:nil];
-    UINavigationController *emptyNC=[[UINavigationController alloc] initWithRootViewController:emptyVC];
-    emptyNC.navigationBarHidden = YES;
-    [self.window setRootViewController:emptyNC];
-    
-    [self.window makeKeyAndVisible];
+//    // Override point for customization after application launch.
+//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    // Override point for customization after application launch.
+//    self.window.backgroundColor = [UIColor whiteColor];
+//    
+//    PIViewController *emptyVC = [[PIViewController alloc] initWithNibName:@"PIViewController" bundle:nil];
+//    UINavigationController *emptyNC=[[UINavigationController alloc] initWithRootViewController:emptyVC];
+//    emptyNC.navigationBarHidden = YES;
+//    [self.window setRootViewController:emptyNC];
+//    
+//    [self.window makeKeyAndVisible];
     
     
     return YES;
