@@ -1,0 +1,21 @@
+//
+//  PIImageDoodler-PrefixHeader.pch
+//  PIImageDoodler
+//
+//  Created by Pavan on 19/05/17.
+//  Copyright © 2017 Pavan Itagi. All rights reserved.
+//
+
+#ifndef PIImageDoodler_PrefixHeader_pch
+#define PIImageDoodler_PrefixHeader_pch
+
+#import "NSFileManager+CacheHelper.h"
+#import "PIHelper.h"
+#import "PIDefines.h"
+#import "PIStrings.h"
+
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PIImageDoodler_PrefixHeader_pch */

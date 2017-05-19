@@ -30,6 +30,13 @@
 		8BB483901ECEB2910001774B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB4838F1ECEB2910001774B /* MBProgressHUD.m */; };
 		8BB483921ECEB5080001774B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BB483911ECEB5080001774B /* Main.storyboard */; };
 		8BB483941ECEB61D0001774B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BB483931ECEB61D0001774B /* LaunchScreen.storyboard */; };
+		8BB483981ECEBDC00001774B /* PIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB483971ECEBDC00001774B /* PIHelper.m */; };
+		8BB483B41ECEBE9E0001774B /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB483A11ECEBE9E0001774B /* GTMNSString+HTML.m */; };
+		8BB483B51ECEBE9E0001774B /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB483A31ECEBE9E0001774B /* NSString+HTML.m */; };
+		8BB483BD1ECEBF2D0001774B /* NSFileManager+CacheHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB483BC1ECEBF2D0001774B /* NSFileManager+CacheHelper.m */; };
+		8BB483C01ECEBFB50001774B /* UIColor+Hexadecimal.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB483BF1ECEBFB50001774B /* UIColor+Hexadecimal.m */; };
+		8BB483C31ECEBFF20001774B /* UIImage+Scaling.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB483C21ECEBFF20001774B /* UIImage+Scaling.m */; };
+		8BB483C61ECEC0260001774B /* UIView+CustomAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB483C51ECEC0260001774B /* UIView+CustomAnimation.m */; };
 		D38FF9AC411B2BB11A4B33B6 /* libPods-PIImageDoodlerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16BAEBC926D69C43AAE7288C /* libPods-PIImageDoodlerTests.a */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +60,6 @@
 		5857BCC918C99AC200796BDC /* PIImageDoodler-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PIImageDoodler-Info.plist"; sourceTree = "<group>"; };
 		5857BCCB18C99AC200796BDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5857BCCD18C99AC200796BDC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5857BCCF18C99AC200796BDC /* PIImageDoodler-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PIImageDoodler-Prefix.pch"; sourceTree = "<group>"; };
 		5857BCD018C99AC200796BDC /* PIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PIAppDelegate.h; sourceTree = "<group>"; };
 		5857BCD118C99AC200796BDC /* PIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PIAppDelegate.m; sourceTree = "<group>"; };
 		5857BCD618C99AC200796BDC /* PIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PIViewController.h; sourceTree = "<group>"; };
@@ -79,6 +85,23 @@
 		8BB4838F1ECEB2910001774B /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		8BB483911ECEB5080001774B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8BB483931ECEB61D0001774B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8BB483961ECEBDC00001774B /* PIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PIHelper.h; sourceTree = "<group>"; };
+		8BB483971ECEBDC00001774B /* PIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PIHelper.m; sourceTree = "<group>"; };
+		8BB483991ECEBE230001774B /* PIDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PIDefines.h; sourceTree = "<group>"; };
+		8BB4839A1ECEBE2C0001774B /* PIStrings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PIStrings.h; sourceTree = "<group>"; };
+		8BB483A01ECEBE9E0001774B /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
+		8BB483A11ECEBE9E0001774B /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
+		8BB483A21ECEBE9E0001774B /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
+		8BB483A31ECEBE9E0001774B /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
+		8BB483BB1ECEBF2D0001774B /* NSFileManager+CacheHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+CacheHelper.h"; sourceTree = "<group>"; };
+		8BB483BC1ECEBF2D0001774B /* NSFileManager+CacheHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+CacheHelper.m"; sourceTree = "<group>"; };
+		8BB483BE1ECEBFB50001774B /* UIColor+Hexadecimal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hexadecimal.h"; sourceTree = "<group>"; };
+		8BB483BF1ECEBFB50001774B /* UIColor+Hexadecimal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hexadecimal.m"; sourceTree = "<group>"; };
+		8BB483C11ECEBFF20001774B /* UIImage+Scaling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Scaling.h"; sourceTree = "<group>"; };
+		8BB483C21ECEBFF20001774B /* UIImage+Scaling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Scaling.m"; sourceTree = "<group>"; };
+		8BB483C41ECEC0260001774B /* UIView+CustomAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CustomAnimation.h"; sourceTree = "<group>"; };
+		8BB483C51ECEC0260001774B /* UIView+CustomAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CustomAnimation.m"; sourceTree = "<group>"; };
+		8BB483CA1ECEC18E0001774B /* PIImageDoodler-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PIImageDoodler-PrefixHeader.pch"; sourceTree = "<group>"; };
 		CF0250BE7BCE7F73BE3914AE /* Pods-PIImageDoodlerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PIImageDoodlerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PIImageDoodlerTests/Pods-PIImageDoodlerTests.release.xcconfig"; sourceTree = "<group>"; };
 		FD7C737E3EBB6CEDC83C6B73 /* Pods-PIImageDoodlerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PIImageDoodlerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PIImageDoodlerTests/Pods-PIImageDoodlerTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,7 +194,7 @@
 				5857BCC918C99AC200796BDC /* PIImageDoodler-Info.plist */,
 				5857BCCA18C99AC200796BDC /* InfoPlist.strings */,
 				5857BCCD18C99AC200796BDC /* main.m */,
-				5857BCCF18C99AC200796BDC /* PIImageDoodler-Prefix.pch */,
+				8BB483CA1ECEC18E0001774B /* PIImageDoodler-PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -209,6 +232,12 @@
 		8BB483701ECEB1C90001774B /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				8BB4839B1ECEBE9E0001774B /* CustomCategories */,
+				8BB4839C1ECEBE9E0001774B /* NSFileManager+CacheHelper */,
+				8BB4839F1ECEBE9E0001774B /* NSString+HTML */,
+				8BB483A71ECEBE9E0001774B /* UIColor+Hexadecimal */,
+				8BB483AD1ECEBE9E0001774B /* UIImage+Scaling */,
+				8BB483B01ECEBE9E0001774B /* UIView+CustomAnimation */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -216,6 +245,8 @@
 		8BB483711ECEB1C90001774B /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				8BB483991ECEBE230001774B /* PIDefines.h */,
+				8BB4839A1ECEBE2C0001774B /* PIStrings.h */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -230,6 +261,8 @@
 		8BB483731ECEB1C90001774B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				8BB483961ECEBDC00001774B /* PIHelper.h */,
+				8BB483971ECEBDC00001774B /* PIHelper.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -245,6 +278,7 @@
 		8BB483751ECEB1C90001774B /* ControllerLayer */ = {
 			isa = PBXGroup;
 			children = (
+				8BB483951ECEB88F0001774B /* SignIn */,
 				8BB483811ECEB2810001774B /* ColorPickerScreen */,
 				8BB483851ECEB2810001774B /* DrawingScreen */,
 			);
@@ -340,6 +374,67 @@
 				8BB4838F1ECEB2910001774B /* MBProgressHUD.m */,
 			);
 			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		8BB483951ECEB88F0001774B /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		8BB4839B1ECEBE9E0001774B /* CustomCategories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomCategories;
+			sourceTree = "<group>";
+		};
+		8BB4839C1ECEBE9E0001774B /* NSFileManager+CacheHelper */ = {
+			isa = PBXGroup;
+			children = (
+				8BB483BB1ECEBF2D0001774B /* NSFileManager+CacheHelper.h */,
+				8BB483BC1ECEBF2D0001774B /* NSFileManager+CacheHelper.m */,
+			);
+			path = "NSFileManager+CacheHelper";
+			sourceTree = "<group>";
+		};
+		8BB4839F1ECEBE9E0001774B /* NSString+HTML */ = {
+			isa = PBXGroup;
+			children = (
+				8BB483A01ECEBE9E0001774B /* GTMNSString+HTML.h */,
+				8BB483A11ECEBE9E0001774B /* GTMNSString+HTML.m */,
+				8BB483A21ECEBE9E0001774B /* NSString+HTML.h */,
+				8BB483A31ECEBE9E0001774B /* NSString+HTML.m */,
+			);
+			path = "NSString+HTML";
+			sourceTree = "<group>";
+		};
+		8BB483A71ECEBE9E0001774B /* UIColor+Hexadecimal */ = {
+			isa = PBXGroup;
+			children = (
+				8BB483BE1ECEBFB50001774B /* UIColor+Hexadecimal.h */,
+				8BB483BF1ECEBFB50001774B /* UIColor+Hexadecimal.m */,
+			);
+			path = "UIColor+Hexadecimal";
+			sourceTree = "<group>";
+		};
+		8BB483AD1ECEBE9E0001774B /* UIImage+Scaling */ = {
+			isa = PBXGroup;
+			children = (
+				8BB483C11ECEBFF20001774B /* UIImage+Scaling.h */,
+				8BB483C21ECEBFF20001774B /* UIImage+Scaling.m */,
+			);
+			path = "UIImage+Scaling";
+			sourceTree = "<group>";
+		};
+		8BB483B01ECEBE9E0001774B /* UIView+CustomAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				8BB483C41ECEC0260001774B /* UIView+CustomAnimation.h */,
+				8BB483C51ECEC0260001774B /* UIView+CustomAnimation.m */,
+			);
+			path = "UIView+CustomAnimation";
 			sourceTree = "<group>";
 		};
 		F9076B6949B8C300AA198E24 /* Pods */ = {
@@ -556,12 +651,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BB483C61ECEC0260001774B /* UIView+CustomAnimation.m in Sources */,
 				8BB4838B1ECEB2810001774B /* PIDrawerViewController.m in Sources */,
+				8BB483C01ECEBFB50001774B /* UIColor+Hexadecimal.m in Sources */,
 				5857BCCE18C99AC200796BDC /* main.m in Sources */,
+				8BB483BD1ECEBF2D0001774B /* NSFileManager+CacheHelper.m in Sources */,
 				5857BCD818C99AC200796BDC /* PIViewController.m in Sources */,
+				8BB483B51ECEBE9E0001774B /* NSString+HTML.m in Sources */,
 				8BB483891ECEB2810001774B /* PIColorPickerController.m in Sources */,
+				8BB483C31ECEBFF20001774B /* UIImage+Scaling.m in Sources */,
 				8BB483801ECEB2770001774B /* PIDrawerView.m in Sources */,
 				5857BCD218C99AC200796BDC /* PIAppDelegate.m in Sources */,
+				8BB483981ECEBDC00001774B /* PIHelper.m in Sources */,
+				8BB483B41ECEBE9E0001774B /* GTMNSString+HTML.m in Sources */,
 				8BB483901ECEB2910001774B /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -685,7 +787,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = PYR923S5V2;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PIImageDoodler/PIImageDoodler-Prefix.pch";
+				GCC_PREFIX_HEADER = "PIImageDoodler/PIImageDoodler-PrefixHeader.pch";
 				INFOPLIST_FILE = "PIImageDoodler/PIImageDoodler-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -703,7 +805,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = PYR923S5V2;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PIImageDoodler/PIImageDoodler-Prefix.pch";
+				GCC_PREFIX_HEADER = "PIImageDoodler/PIImageDoodler-PrefixHeader.pch";
 				INFOPLIST_FILE = "PIImageDoodler/PIImageDoodler-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
