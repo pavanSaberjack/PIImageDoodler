@@ -9,7 +9,9 @@
 #ifndef PIImageDoodler_PrefixHeader_pch
 #define PIImageDoodler_PrefixHeader_pch
 
+#import "Doodle+CoreDataClass.h"
 #import "NSFileManager+CacheHelper.h"
+#import <CoreData/CoreData.h>
 #import "PIHelper.h"
 #import "PIDefines.h"
 #import "PIStrings.h"

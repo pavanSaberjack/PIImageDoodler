@@ -17,7 +17,7 @@ static NSString *editModeCellIdentifier = @"DoodleEditModeCellIdentifier";
 @property (weak, nonatomic) IBOutlet UIView *topBarView;
 @property (weak, nonatomic) IBOutlet UITableView *doodlesTableView;
 
-@property (strong, nonatomic) NSMutableArray *myDoodlesArray;
+@property (strong, nonatomic) NSMutableArray<Doodle *> *myDoodlesArray;
 @property (nonatomic) BOOL isEditMode;
 @end
 
@@ -41,7 +41,8 @@ static NSString *editModeCellIdentifier = @"DoodleEditModeCellIdentifier";
     [self presentViewController:vc animated:YES completion:nil];
 }
 
-- (NSMutableArray *)myDoodlesArray
+
+- (NSMutableArray<Doodle *> *)myDoodlesArray
 {
     if (!_myDoodlesArray) {
         _myDoodlesArray = [NSMutableArray array];
@@ -102,9 +103,8 @@ static NSString *editModeCellIdentifier = @"DoodleEditModeCellIdentifier";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    id doodleObj = self.myDoodlesArray[indexPath.row];
-//    UIImage *img = [UIImage imageWithContentsOfFile:[PIHelper imagePathForDoodleWithUniqueId:doodleObj[@"uniqueId"]]];
-    
+    Doodle *doodleObj = self.myDoodlesArray[indexPath.row];
+    UIImage *img = [UIImage imageWithContentsOfFile:[PIHelper imagePathForDoodleWithUniqueId:doodleObj.uniqueId]];
     if (self.isEditMode) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:editModeCellIdentifier];
         return cell;

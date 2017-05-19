@@ -36,6 +36,8 @@
 		8BB483C31ECEBFF20001774B /* UIImage+Scaling.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB483C21ECEBFF20001774B /* UIImage+Scaling.m */; };
 		8BB483C61ECEC0260001774B /* UIView+CustomAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB483C51ECEC0260001774B /* UIView+CustomAnimation.m */; };
 		8BB483CD1ECECD230001774B /* PIDrawingScreenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB483CC1ECECD230001774B /* PIDrawingScreenVC.m */; };
+		8BB483D01ECEDB400001774B /* PIDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB483CF1ECEDB400001774B /* PIDataManager.m */; };
+		8BB483D31ECEDB990001774B /* PIImageDoodler.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8BB483D11ECEDB990001774B /* PIImageDoodler.xcdatamodeld */; };
 		D38FF9AC411B2BB11A4B33B6 /* libPods-PIImageDoodlerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16BAEBC926D69C43AAE7288C /* libPods-PIImageDoodlerTests.a */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +102,9 @@
 		8BB483CA1ECEC18E0001774B /* PIImageDoodler-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PIImageDoodler-PrefixHeader.pch"; sourceTree = "<group>"; };
 		8BB483CB1ECECD230001774B /* PIDrawingScreenVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PIDrawingScreenVC.h; sourceTree = "<group>"; };
 		8BB483CC1ECECD230001774B /* PIDrawingScreenVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PIDrawingScreenVC.m; sourceTree = "<group>"; };
+		8BB483CE1ECEDB400001774B /* PIDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PIDataManager.h; sourceTree = "<group>"; };
+		8BB483CF1ECEDB400001774B /* PIDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PIDataManager.m; sourceTree = "<group>"; };
+		8BB483D21ECEDB990001774B /* PIImageDoodler.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PIImageDoodler.xcdatamodel; sourceTree = "<group>"; };
 		CF0250BE7BCE7F73BE3914AE /* Pods-PIImageDoodlerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PIImageDoodlerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PIImageDoodlerTests/Pods-PIImageDoodlerTests.release.xcconfig"; sourceTree = "<group>"; };
 		FD7C737E3EBB6CEDC83C6B73 /* Pods-PIImageDoodlerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PIImageDoodlerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PIImageDoodlerTests/Pods-PIImageDoodlerTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -286,6 +291,9 @@
 		8BB483761ECEB1C90001774B /* ModelLayer */ = {
 			isa = PBXGroup;
 			children = (
+				8BB483CE1ECEDB400001774B /* PIDataManager.h */,
+				8BB483CF1ECEDB400001774B /* PIDataManager.m */,
+				8BB483D11ECEDB990001774B /* PIImageDoodler.xcdatamodeld */,
 			);
 			path = ModelLayer;
 			sourceTree = "<group>";
@@ -655,9 +663,11 @@
 				8BB483B51ECEBE9E0001774B /* NSString+HTML.m in Sources */,
 				8BB483891ECEB2810001774B /* PIColorPickerController.m in Sources */,
 				8BB483C31ECEBFF20001774B /* UIImage+Scaling.m in Sources */,
+				8BB483D31ECEDB990001774B /* PIImageDoodler.xcdatamodeld in Sources */,
 				8BB483801ECEB2770001774B /* PIDrawerView.m in Sources */,
 				5857BCD218C99AC200796BDC /* PIAppDelegate.m in Sources */,
 				8BB483981ECEBDC00001774B /* PIHelper.m in Sources */,
+				8BB483D01ECEDB400001774B /* PIDataManager.m in Sources */,
 				8BB483CD1ECECD230001774B /* PIDrawingScreenVC.m in Sources */,
 				8BB483B41ECEBE9E0001774B /* GTMNSString+HTML.m in Sources */,
 				8BB483901ECEB2910001774B /* MBProgressHUD.m in Sources */,
@@ -885,6 +895,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8BB483D11ECEDB990001774B /* PIImageDoodler.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8BB483D21ECEDB990001774B /* PIImageDoodler.xcdatamodel */,
+			);
+			currentVersion = 8BB483D21ECEDB990001774B /* PIImageDoodler.xcdatamodel */;
+			path = PIImageDoodler.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5857BCB618C99AC200796BDC /* Project object */;
 }
