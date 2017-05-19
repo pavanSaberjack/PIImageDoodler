@@ -21,6 +21,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1fH-rT-tCU">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="veo-bX-ogy">
+                                        <rect key="frame" x="319" y="0.0" width="46" height="44"/>
+                                        <state key="normal" title="Create"/>
+                                        <connections>
+                                            <action selector="startDrawing:" destination="dgm-jg-UcS" eventType="touchUpInside" id="igj-KF-nlw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="veo-bX-ogy" secondAttribute="bottom" id="QpL-Hk-tuI"/>
+                                    <constraint firstAttribute="height" constant="44" id="Xng-05-Q7C"/>
+                                    <constraint firstAttribute="trailing" secondItem="veo-bX-ogy" secondAttribute="trailing" constant="10" id="bpw-3a-PAh"/>
+                                    <constraint firstItem="veo-bX-ogy" firstAttribute="top" secondItem="1fH-rT-tCU" secondAttribute="top" id="s3f-qv-Dzy"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D0l-s4-Tle">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                 <color key="backgroundColor" red="1" green="0.34203045360000001" blue="0.23785131579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -29,7 +48,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="T10-q1-0lR">
-                                <rect key="frame" x="0.0" y="63" width="375" height="604"/>
+                                <rect key="frame" x="0.0" y="63" width="375" height="560"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="dgm-jg-UcS" id="VqT-Fe-p7O"/>
@@ -41,10 +60,13 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="D0l-s4-Tle" secondAttribute="trailing" id="0zn-FN-R8N"/>
                             <constraint firstItem="T10-q1-0lR" firstAttribute="leading" secondItem="S6J-7N-kXs" secondAttribute="leading" id="Cdq-Mw-xDp"/>
+                            <constraint firstAttribute="trailing" secondItem="1fH-rT-tCU" secondAttribute="trailing" id="M9W-TG-t0t"/>
                             <constraint firstItem="D0l-s4-Tle" firstAttribute="top" secondItem="S6J-7N-kXs" secondAttribute="top" id="OAs-3t-jFI"/>
                             <constraint firstItem="D0l-s4-Tle" firstAttribute="leading" secondItem="S6J-7N-kXs" secondAttribute="leading" id="RKq-xm-XpB"/>
-                            <constraint firstItem="ayX-W0-O9e" firstAttribute="top" secondItem="T10-q1-0lR" secondAttribute="bottom" id="YXo-7Z-8Vf"/>
+                            <constraint firstItem="1fH-rT-tCU" firstAttribute="leading" secondItem="S6J-7N-kXs" secondAttribute="leading" id="aDI-75-kFc"/>
                             <constraint firstAttribute="trailing" secondItem="T10-q1-0lR" secondAttribute="trailing" id="aoT-bv-VZF"/>
+                            <constraint firstItem="ayX-W0-O9e" firstAttribute="top" secondItem="1fH-rT-tCU" secondAttribute="bottom" id="eNX-hQ-hu0"/>
+                            <constraint firstItem="1fH-rT-tCU" firstAttribute="top" secondItem="T10-q1-0lR" secondAttribute="bottom" id="mDu-lf-bUs"/>
                             <constraint firstItem="T10-q1-0lR" firstAttribute="top" secondItem="D0l-s4-Tle" secondAttribute="bottom" constant="-1" id="rDB-Ck-IuJ"/>
                         </constraints>
                     </view>
