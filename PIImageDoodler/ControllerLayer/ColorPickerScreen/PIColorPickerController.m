@@ -95,8 +95,7 @@
 {
     UIColor *color = self.resultColorImageView.backgroundColor;
     [self.delegate colorSelected:color];
-    
-    [self.navigationController popViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)redSliderMoved:(id)sender

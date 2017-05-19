@@ -7,7 +7,7 @@
 //
 
 #import "PIViewController.h"
-#import "PIDrawerViewController.h"
+#import "PIDrawingScreenVC.h"
 
 static NSString *cellIdentifier = @"DoodleCellIdentifier";
 static NSString *editModeCellIdentifier = @"DoodleEditModeCellIdentifier";
@@ -37,8 +37,8 @@ static NSString *editModeCellIdentifier = @"DoodleEditModeCellIdentifier";
 
 - (IBAction)startDrawing:(id)sender
 {
-    PIDrawerViewController *drawerController = [[PIDrawerViewController alloc] initWithNibName:@"PIDrawerViewController" bundle:nil];
-    [self.navigationController pushViewController:drawerController animated:YES];
+    PIDrawingScreenVC *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"PIDrawingScreenVC"];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 - (NSMutableArray *)myDoodlesArray
@@ -75,8 +75,6 @@ static NSString *editModeCellIdentifier = @"DoodleEditModeCellIdentifier";
     }
     
     // go for Detail
-    PIDrawerViewController *drawerController = [[PIDrawerViewController alloc] initWithNibName:@"PIDrawerViewController" bundle:nil];
-    [self.navigationController pushViewController:drawerController animated:YES];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

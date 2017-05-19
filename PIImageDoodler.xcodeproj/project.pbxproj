@@ -25,8 +25,6 @@
 		8BB483801ECEB2770001774B /* PIDrawerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB4837F1ECEB2770001774B /* PIDrawerView.m */; };
 		8BB483891ECEB2810001774B /* PIColorPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB483831ECEB2810001774B /* PIColorPickerController.m */; };
 		8BB4838A1ECEB2810001774B /* PIColorPickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BB483841ECEB2810001774B /* PIColorPickerController.xib */; };
-		8BB4838B1ECEB2810001774B /* PIDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB483871ECEB2810001774B /* PIDrawerViewController.m */; };
-		8BB4838C1ECEB2810001774B /* PIDrawerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BB483881ECEB2810001774B /* PIDrawerViewController.xib */; };
 		8BB483901ECEB2910001774B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB4838F1ECEB2910001774B /* MBProgressHUD.m */; };
 		8BB483921ECEB5080001774B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BB483911ECEB5080001774B /* Main.storyboard */; };
 		8BB483941ECEB61D0001774B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BB483931ECEB61D0001774B /* LaunchScreen.storyboard */; };
@@ -37,6 +35,7 @@
 		8BB483C01ECEBFB50001774B /* UIColor+Hexadecimal.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB483BF1ECEBFB50001774B /* UIColor+Hexadecimal.m */; };
 		8BB483C31ECEBFF20001774B /* UIImage+Scaling.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB483C21ECEBFF20001774B /* UIImage+Scaling.m */; };
 		8BB483C61ECEC0260001774B /* UIView+CustomAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB483C51ECEC0260001774B /* UIView+CustomAnimation.m */; };
+		8BB483CD1ECECD230001774B /* PIDrawingScreenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB483CC1ECECD230001774B /* PIDrawingScreenVC.m */; };
 		D38FF9AC411B2BB11A4B33B6 /* libPods-PIImageDoodlerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16BAEBC926D69C43AAE7288C /* libPods-PIImageDoodlerTests.a */; };
 /* End PBXBuildFile section */
 
@@ -78,9 +77,6 @@
 		8BB483821ECEB2810001774B /* PIColorPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PIColorPickerController.h; sourceTree = "<group>"; };
 		8BB483831ECEB2810001774B /* PIColorPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PIColorPickerController.m; sourceTree = "<group>"; };
 		8BB483841ECEB2810001774B /* PIColorPickerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PIColorPickerController.xib; sourceTree = "<group>"; };
-		8BB483861ECEB2810001774B /* PIDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PIDrawerViewController.h; sourceTree = "<group>"; };
-		8BB483871ECEB2810001774B /* PIDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PIDrawerViewController.m; sourceTree = "<group>"; };
-		8BB483881ECEB2810001774B /* PIDrawerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PIDrawerViewController.xib; sourceTree = "<group>"; };
 		8BB4838E1ECEB2910001774B /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		8BB4838F1ECEB2910001774B /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		8BB483911ECEB5080001774B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -102,6 +98,8 @@
 		8BB483C41ECEC0260001774B /* UIView+CustomAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CustomAnimation.h"; sourceTree = "<group>"; };
 		8BB483C51ECEC0260001774B /* UIView+CustomAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CustomAnimation.m"; sourceTree = "<group>"; };
 		8BB483CA1ECEC18E0001774B /* PIImageDoodler-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PIImageDoodler-PrefixHeader.pch"; sourceTree = "<group>"; };
+		8BB483CB1ECECD230001774B /* PIDrawingScreenVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PIDrawingScreenVC.h; sourceTree = "<group>"; };
+		8BB483CC1ECECD230001774B /* PIDrawingScreenVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PIDrawingScreenVC.m; sourceTree = "<group>"; };
 		CF0250BE7BCE7F73BE3914AE /* Pods-PIImageDoodlerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PIImageDoodlerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PIImageDoodlerTests/Pods-PIImageDoodlerTests.release.xcconfig"; sourceTree = "<group>"; };
 		FD7C737E3EBB6CEDC83C6B73 /* Pods-PIImageDoodlerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PIImageDoodlerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PIImageDoodlerTests/Pods-PIImageDoodlerTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -360,9 +358,8 @@
 		8BB483851ECEB2810001774B /* DrawingScreen */ = {
 			isa = PBXGroup;
 			children = (
-				8BB483861ECEB2810001774B /* PIDrawerViewController.h */,
-				8BB483871ECEB2810001774B /* PIDrawerViewController.m */,
-				8BB483881ECEB2810001774B /* PIDrawerViewController.xib */,
+				8BB483CB1ECECD230001774B /* PIDrawingScreenVC.h */,
+				8BB483CC1ECECD230001774B /* PIDrawingScreenVC.m */,
 			);
 			path = DrawingScreen;
 			sourceTree = "<group>";
@@ -535,7 +532,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5857BCDA18C99AC200796BDC /* Images.xcassets in Resources */,
-				8BB4838C1ECEB2810001774B /* PIDrawerViewController.xib in Resources */,
 				8BB483921ECEB5080001774B /* Main.storyboard in Resources */,
 				8BB483941ECEB61D0001774B /* LaunchScreen.storyboard in Resources */,
 				8BB4838A1ECEB2810001774B /* PIColorPickerController.xib in Resources */,
@@ -652,7 +648,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BB483C61ECEC0260001774B /* UIView+CustomAnimation.m in Sources */,
-				8BB4838B1ECEB2810001774B /* PIDrawerViewController.m in Sources */,
 				8BB483C01ECEBFB50001774B /* UIColor+Hexadecimal.m in Sources */,
 				5857BCCE18C99AC200796BDC /* main.m in Sources */,
 				8BB483BD1ECEBF2D0001774B /* NSFileManager+CacheHelper.m in Sources */,
@@ -663,6 +658,7 @@
 				8BB483801ECEB2770001774B /* PIDrawerView.m in Sources */,
 				5857BCD218C99AC200796BDC /* PIAppDelegate.m in Sources */,
 				8BB483981ECEBDC00001774B /* PIHelper.m in Sources */,
+				8BB483CD1ECECD230001774B /* PIDrawingScreenVC.m in Sources */,
 				8BB483B41ECEBE9E0001774B /* GTMNSString+HTML.m in Sources */,
 				8BB483901ECEB2910001774B /* MBProgressHUD.m in Sources */,
 			);
