@@ -24,4 +24,5 @@ typedef void (^CoreDataCallBack)(BOOL isSuccess);
 
 + (void)deleteAllDoodlesWithCompletion:(void(^)(BOOL isSuccess))callback;
 
++ (Doodle *)getDoodleForId:(NSString *)uniqueId;
 @end

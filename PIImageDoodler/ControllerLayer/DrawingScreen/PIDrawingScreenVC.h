@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol PIDrawingScreenVCDelegate;
 @interface PIDrawingScreenVC : UIViewController
+@property (nonatomic, weak) id<PIDrawingScreenVCDelegate>delegate;
+@end
+
+@protocol PIDrawingScreenVCDelegate <NSObject>
+
+- (void)didCreatNewDrawingForDrawingScreen:(PIDrawingScreenVC *)drawingScreen;
 
 @end

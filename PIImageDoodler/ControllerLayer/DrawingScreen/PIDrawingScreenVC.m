@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *drawViewBackground;
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (nonatomic, strong) UIColor *selectedColor;
+@property (nonatomic, strong) NSString *uniqueId;
 
 @end
 
@@ -40,6 +41,8 @@
     [self.drawerView setDrawingMode:DrawingModePaint];
     self.drawButton.alpha = 1.0f;
     self.eraseButton.alpha = 0.5f;
+    
+    self.uniqueId = [NSString stringWithFormat:@"%@", [PIHelper getDoodleUniqueID]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,6 +50,35 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Private interface methods
+- (void)saveDoodleLocallyWithDoodleImage:(UIImage *)image withCompletion:(void(^)(BOOL isSuccess))callback
+{
+    NSError *error;
+    NSString *imagePath = [PIHelper imagePathForDoodleWithUniqueId:self.uniqueId];
+    
+    if ([[NSFileManager defaultManager] fileExistsAtPath:imagePath]) {
+        NSError *deleteItemError = nil;
+        [[NSFileManager defaultManager] removeItemAtPath:imagePath error:&deleteItemError];
+        
+        if (deleteItemError) {
+            DLog(@"Delete error");
+        }
+    }
+    
+    NSData *dataImage = UIImagePNGRepresentation(image);
+    [dataImage writeToFile:imagePath atomically:YES];
+    
+    if (![PIDataManager getDoodleForId:self.uniqueId]) { // create core data only once
+        [PIDataManager createDoodleWithName:@"My Doodle"
+                                description:@"Some description"
+                                   uniqueId:self.uniqueId
+                                 completion:^(Doodle *docObject) {
+                                     callback((docObject != nil));
+                                 }];
+    }
+}
+
+#pragma mark - UIButton Action methods
 - (IBAction)changeBackground:(id)sender
 {
     UIAlertController* alert = [UIAlertController
@@ -95,26 +127,91 @@
 
 - (IBAction)closePressed:(UIButton *)sender
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    UIAlertController* alert = [UIAlertController
+                                alertControllerWithTitle:@"Do you want to save it to your photo album?"
+                                message:nil
+                                preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* button0 = [UIAlertAction
+                              actionWithTitle:@"No, Thanks!"
+                              style:UIAlertActionStyleCancel
+                              handler:^(UIAlertAction * action) {
+                                  //  UIAlertController will automatically dismiss the view
+                                  [self dismissViewControllerAnimated:YES completion:nil];
+                              }];
+    
+    UIAlertAction* button1 = [UIAlertAction
+                              actionWithTitle:@"Yes please"
+                              style:UIAlertActionStyleDefault
+                              handler:^(UIAlertAction * action) {
+                                  
+                                  MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+                                  hud.label.text = @"Saving...";
+                                  [self saveCurrentDoodleAndShouldSaveToPhotoAlbum:YES withCompletion:^(BOOL isSuccess) {
+                                      dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                                          [hud hideAnimated:YES];
+                                          [self dismissViewControllerAnimated:YES completion:nil];
+                                      });
+                                  }];
+                              }];
+    
+    [alert addAction:button0];
+    [alert addAction:button1];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (UIImage *)getRawDoodle
+{
+    UIGraphicsBeginImageContext(self.containerView.frame.size);
+    [self.containerView.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return viewImage;
+}
+
+- (void)saveCurrentDoodleAndShouldSaveToPhotoAlbum:(BOOL)shouldSaveToPhotoAlbum withCompletion:(void(^)(BOOL isSuccess))callback
+{
+    [self saveDoodle:[self getRawDoodle] souldSaveToPhotoAlbum:shouldSaveToPhotoAlbum withCompletion:callback];
+}
+
+- (void)saveDoodle:(UIImage *)doodleImage
+souldSaveToPhotoAlbum:(BOOL)shouldSaveToPhotoAlbum
+    withCompletion:(void(^)(BOOL isSuccess))callback
+{
+    if (!doodleImage) {
+        callback(NO);
+        return;
+    }
+ 
+    
+    
+    if (shouldSaveToPhotoAlbum) {
+        UIImageWriteToSavedPhotosAlbum(doodleImage, nil, nil, nil);
+    }
+    
+    [self saveDoodleLocallyWithDoodleImage:doodleImage
+                            withCompletion:^(BOOL isSuccess) {
+                                dispatch_async(dispatch_get_main_queue(), ^{
+                                    if ([self.delegate respondsToSelector:@selector(didCreatNewDrawingForDrawingScreen:)]) {
+                                        [self.delegate didCreatNewDrawingForDrawingScreen:self];
+                                    }
+                                    callback(isSuccess);
+                                });
+                            }];
+    
 }
 
 - (IBAction)savePressed:(UIButton *)sender
 {
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.label.text = @"Saving to your Photo album";
+    hud.label.text = @"Saving...";
     
-    UIGraphicsBeginImageContext(self.containerView.frame.size);
-    [self.containerView.layer renderInContext:UIGraphicsGetCurrentContext()];
-    UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    UIImageWriteToSavedPhotosAlbum(viewImage, nil, nil, nil);
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        hud.label.text = @"Saved ...";
+    [self saveCurrentDoodleAndShouldSaveToPhotoAlbum:NO withCompletion:^(BOOL isSuccess) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [hud hideAnimated:YES];
         });
-    });
+    }];
 }
 
 - (IBAction)drawPressed:(UIButton *)sender

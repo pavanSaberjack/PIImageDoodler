@@ -60,7 +60,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="h9J-uc-MZJ" firstAttribute="centerY" secondItem="lnR-Wu-PEW" secondAttribute="centerY" id="2mL-oo-v3C"/>
                                     <constraint firstItem="yE7-q9-Mec" firstAttribute="leading" secondItem="EgU-WH-kKI" secondAttribute="leading" constant="20" id="7UE-BV-avw"/>
@@ -98,7 +98,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="6xI-e8-01c" secondAttribute="bottom" id="3vk-UO-7rF"/>
                                     <constraint firstAttribute="bottom" secondItem="eYf-4T-vjL" secondAttribute="bottom" id="LIV-5r-97Q"/>
@@ -196,9 +196,11 @@
                                     <constraint firstAttribute="height" constant="64" id="5KL-2U-sHf"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="T10-q1-0lR">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="grouped" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="T10-q1-0lR">
                                 <rect key="frame" x="0.0" y="63" width="375" height="560"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="separatorColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
                                     <outlet property="dataSource" destination="dgm-jg-UcS" id="VqT-Fe-p7O"/>
                                     <outlet property="delegate" destination="dgm-jg-UcS" id="YWK-2D-ah9"/>

@@ -10,5 +10,4 @@
 
 @interface PIDoodleTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *doodleImageView;
-
 @end

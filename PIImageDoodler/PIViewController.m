@@ -11,9 +11,8 @@
 #import "PIDoodleTableViewCell.h"
 
 static NSString *cellIdentifier = @"DoodleCellIdentifier";
-static NSString *editModeCellIdentifier = @"DoodleEditModeCellIdentifier";
 
-@interface PIViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface PIViewController () <UITableViewDelegate, UITableViewDataSource, PIDrawingScreenVCDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *startDrawingButton;
 @property (weak, nonatomic) IBOutlet UIView *topBarView;
 @property (weak, nonatomic) IBOutlet UITableView *doodlesTableView;
@@ -26,6 +25,9 @@ static NSString *editModeCellIdentifier = @"DoodleEditModeCellIdentifier";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self initialSetup];
+    [self fetchLocalDataAndUpdateUI];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -38,9 +40,9 @@ static NSString *editModeCellIdentifier = @"DoodleEditModeCellIdentifier";
 - (IBAction)startDrawing:(id)sender
 {
     PIDrawingScreenVC *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"PIDrawingScreenVC"];
+    vc.delegate = self;
     [self presentViewController:vc animated:YES completion:nil];
 }
-
 
 - (NSMutableArray<Doodle *> *)myDoodlesArray
 {
@@ -58,13 +60,14 @@ static NSString *editModeCellIdentifier = @"DoodleEditModeCellIdentifier";
     [self.doodlesTableView registerNib:[UINib nibWithNibName:@"PIDoodleTableViewCell" bundle:nil] forCellReuseIdentifier:cellIdentifier];
 }
 
-#pragma mark - UITableViewDelegate methods
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+- (void)fetchLocalDataAndUpdateUI
 {
-    
-    return 2; // first section is create
+    [self.myDoodlesArray removeAllObjects];
+    [self.myDoodlesArray addObjectsFromArray:[PIDataManager getStoredDoodles]];
+    [self.doodlesTableView reloadData];
 }
 
+#pragma mark - UITableViewDelegate methods
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -98,9 +101,15 @@ static NSString *editModeCellIdentifier = @"DoodleEditModeCellIdentifier";
 {
     Doodle *doodleObj = self.myDoodlesArray[indexPath.row];
     UIImage *img = [UIImage imageWithContentsOfFile:[PIHelper imagePathForDoodleWithUniqueId:doodleObj.uniqueId]];
-    PIDoodleTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:editModeCellIdentifier];
+    PIDoodleTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     cell.doodleImageView.image = img;
     return cell;
+}
+
+#pragma mark - PIDrawingScreenVCDelegate methods
+- (void)didCreatNewDrawingForDrawingScreen:(PIDrawingScreenVC *)drawingScreen
+{
+    [self fetchLocalDataAndUpdateUI];
 }
 
 @end

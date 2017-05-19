@@ -11,6 +11,7 @@
 
 #import "Doodle+CoreDataClass.h"
 #import "NSFileManager+CacheHelper.h"
+#import "PIDataManager.h"
 #import <CoreData/CoreData.h>
 #import "PIHelper.h"
 #import "PIDefines.h"

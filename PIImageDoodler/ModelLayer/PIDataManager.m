@@ -264,6 +264,12 @@ static id sharedDataManager = nil;
     return nil;
 }
 
+- (Doodle *)getDoodleForId:(NSString *)uniqueId
+{
+    NSManagedObjectContext *context = [self mainContext];
+    return [self getDoodleForId:uniqueId inContext:context];
+}
+
 - (void)deleteDoodles:(NSArray<Doodle *> *)doodles
            completion:(void(^)(BOOL isSuccess))callback
 {
@@ -357,4 +363,8 @@ static id sharedDataManager = nil;
     [[PIDataManager sharedInstance] deleteAllDoodlesWithCompletion:callback];
 }
 
++ (Doodle *)getDoodleForId:(NSString *)uniqueId
+{
+    return [[PIDataManager sharedInstance] getDoodleForId:uniqueId];
+}
 @end
