@@ -10,6 +10,7 @@
 #import "PIDrawerView.h"
 #import "PIColorPickerController.h"
 #import <MobileCoreServices/MobileCoreServices.h>
+#import "MBProgressHUD.h"
 
 @interface PIDrawerViewController () <UIImagePickerControllerDelegate, UIActionSheetDelegate, UINavigationControllerDelegate, PIColorPickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet PIDrawerView *drawerView;
@@ -19,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *pickEraserButton;
 @property (weak, nonatomic) IBOutlet UIButton *writeButton;
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
+@property (weak, nonatomic) IBOutlet UIView *containerView;
 
 @property (nonatomic, strong) UIColor *selectedColor;
 
@@ -51,7 +53,11 @@
     self.selectedColor = [UIColor redColor];
     [self.pickColorButton setBackgroundColor:self.selectedColor];
     [self.drawerView setSelectedColor:self.selectedColor];
-    // Do any additional setup after loading the view from its nib.
+    
+    
+    [self.drawerView setDrawingMode:DrawingModePaint];
+    self.writeButton.alpha = 1.0f;
+    self.pickEraserButton.alpha = 0.5f;
 }
 
 - (void)didReceiveMemoryWarning
@@ -78,16 +84,41 @@
 - (IBAction)pickEraserButtonPressed:(id)sender
 {
     [self.drawerView setDrawingMode:DrawingModeErase];
+    
+    self.pickEraserButton.alpha = 1.0f;
+    self.writeButton.alpha = 0.5f;
 }
 
 - (IBAction)saveButtonPressed:(id)sender
 {
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.label.text = @"Saving to your Photo album";
     
+    UIGraphicsBeginImageContext(self.containerView.frame.size);
+    [self.containerView.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    UIImageWriteToSavedPhotosAlbum(viewImage, nil, nil, nil);
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        hud.label.text = @"Saved ...";
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [hud hideAnimated:YES];
+        });
+    });
 }
 
 - (IBAction)writeButtonPressed:(id)sender
 {
     [self.drawerView setDrawingMode:DrawingModePaint];
+    
+    self.writeButton.alpha = 1.0f;
+    self.pickEraserButton.alpha = 0.5f;
+}
+
+- (IBAction)backButtonPressed:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - UIActionSheetDelegate methods

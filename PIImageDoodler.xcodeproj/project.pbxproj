@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		520ED0A7B7D4D25C601E996C /* libPods-PIImageDoodler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ACF587962F94A7B0DF1CAC5 /* libPods-PIImageDoodler.a */; };
 		5857BCC218C99AC200796BDC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5857BCC118C99AC200796BDC /* Foundation.framework */; };
 		5857BCC418C99AC200796BDC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5857BCC318C99AC200796BDC /* CoreGraphics.framework */; };
 		5857BCC618C99AC200796BDC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5857BCC518C99AC200796BDC /* UIKit.framework */; };
@@ -21,12 +22,14 @@
 		5857BCEB18C99AC200796BDC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5857BCE918C99AC200796BDC /* InfoPlist.strings */; };
 		5857BCED18C99AC200796BDC /* PIImageDoodlerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5857BCEC18C99AC200796BDC /* PIImageDoodlerTests.m */; };
 		5857BCF918C99F0800796BDC /* PIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5857BCF818C99F0800796BDC /* PIViewController.xib */; };
-		5857BCFD18C9A10B00796BDC /* PIDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5857BCFB18C9A10B00796BDC /* PIDrawerViewController.m */; };
-		5857BCFE18C9A10B00796BDC /* PIDrawerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5857BCFC18C9A10B00796BDC /* PIDrawerViewController.xib */; };
-		5857BD0118C9A32E00796BDC /* PIDrawerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5857BD0018C9A32E00796BDC /* PIDrawerView.m */; };
 		5857BD0318C9AE9B00796BDC /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5857BD0218C9AE9B00796BDC /* MobileCoreServices.framework */; };
-		5857BD0D18C9BC2000796BDC /* PIColorPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5857BD0B18C9BC2000796BDC /* PIColorPickerController.m */; };
-		5857BD0E18C9BC2000796BDC /* PIColorPickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5857BD0C18C9BC2000796BDC /* PIColorPickerController.xib */; };
+		8BB483801ECEB2770001774B /* PIDrawerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB4837F1ECEB2770001774B /* PIDrawerView.m */; };
+		8BB483891ECEB2810001774B /* PIColorPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB483831ECEB2810001774B /* PIColorPickerController.m */; };
+		8BB4838A1ECEB2810001774B /* PIColorPickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BB483841ECEB2810001774B /* PIColorPickerController.xib */; };
+		8BB4838B1ECEB2810001774B /* PIDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB483871ECEB2810001774B /* PIDrawerViewController.m */; };
+		8BB4838C1ECEB2810001774B /* PIDrawerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BB483881ECEB2810001774B /* PIDrawerViewController.xib */; };
+		8BB483901ECEB2910001774B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB4838F1ECEB2910001774B /* MBProgressHUD.m */; };
+		D38FF9AC411B2BB11A4B33B6 /* libPods-PIImageDoodlerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16BAEBC926D69C43AAE7288C /* libPods-PIImageDoodlerTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16BAEBC926D69C43AAE7288C /* libPods-PIImageDoodlerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PIImageDoodlerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2ACF587962F94A7B0DF1CAC5 /* libPods-PIImageDoodler.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PIImageDoodler.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5857BCBE18C99AC200796BDC /* PIImageDoodler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PIImageDoodler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5857BCC118C99AC200796BDC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5857BCC318C99AC200796BDC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -59,15 +64,21 @@
 		5857BCEA18C99AC200796BDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5857BCEC18C99AC200796BDC /* PIImageDoodlerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PIImageDoodlerTests.m; sourceTree = "<group>"; };
 		5857BCF818C99F0800796BDC /* PIViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PIViewController.xib; sourceTree = "<group>"; };
-		5857BCFA18C9A10B00796BDC /* PIDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PIDrawerViewController.h; sourceTree = "<group>"; };
-		5857BCFB18C9A10B00796BDC /* PIDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PIDrawerViewController.m; sourceTree = "<group>"; };
-		5857BCFC18C9A10B00796BDC /* PIDrawerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PIDrawerViewController.xib; sourceTree = "<group>"; };
-		5857BCFF18C9A32E00796BDC /* PIDrawerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PIDrawerView.h; sourceTree = "<group>"; };
-		5857BD0018C9A32E00796BDC /* PIDrawerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PIDrawerView.m; sourceTree = "<group>"; };
 		5857BD0218C9AE9B00796BDC /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		5857BD0A18C9BC2000796BDC /* PIColorPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PIColorPickerController.h; sourceTree = "<group>"; };
-		5857BD0B18C9BC2000796BDC /* PIColorPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PIColorPickerController.m; sourceTree = "<group>"; };
-		5857BD0C18C9BC2000796BDC /* PIColorPickerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PIColorPickerController.xib; sourceTree = "<group>"; };
+		5DDD766E8F272F9823941363 /* Pods-PIImageDoodler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PIImageDoodler.release.xcconfig"; path = "Pods/Target Support Files/Pods-PIImageDoodler/Pods-PIImageDoodler.release.xcconfig"; sourceTree = "<group>"; };
+		823565D926152E5B913D5FAC /* Pods-PIImageDoodler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PIImageDoodler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PIImageDoodler/Pods-PIImageDoodler.debug.xcconfig"; sourceTree = "<group>"; };
+		8BB4837E1ECEB2770001774B /* PIDrawerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PIDrawerView.h; sourceTree = "<group>"; };
+		8BB4837F1ECEB2770001774B /* PIDrawerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PIDrawerView.m; sourceTree = "<group>"; };
+		8BB483821ECEB2810001774B /* PIColorPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PIColorPickerController.h; sourceTree = "<group>"; };
+		8BB483831ECEB2810001774B /* PIColorPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PIColorPickerController.m; sourceTree = "<group>"; };
+		8BB483841ECEB2810001774B /* PIColorPickerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PIColorPickerController.xib; sourceTree = "<group>"; };
+		8BB483861ECEB2810001774B /* PIDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PIDrawerViewController.h; sourceTree = "<group>"; };
+		8BB483871ECEB2810001774B /* PIDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PIDrawerViewController.m; sourceTree = "<group>"; };
+		8BB483881ECEB2810001774B /* PIDrawerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PIDrawerViewController.xib; sourceTree = "<group>"; };
+		8BB4838E1ECEB2910001774B /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		8BB4838F1ECEB2910001774B /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		CF0250BE7BCE7F73BE3914AE /* Pods-PIImageDoodlerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PIImageDoodlerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PIImageDoodlerTests/Pods-PIImageDoodlerTests.release.xcconfig"; sourceTree = "<group>"; };
+		FD7C737E3EBB6CEDC83C6B73 /* Pods-PIImageDoodlerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PIImageDoodlerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PIImageDoodlerTests/Pods-PIImageDoodlerTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +90,7 @@
 				5857BCC418C99AC200796BDC /* CoreGraphics.framework in Frameworks */,
 				5857BCC618C99AC200796BDC /* UIKit.framework in Frameworks */,
 				5857BCC218C99AC200796BDC /* Foundation.framework in Frameworks */,
+				520ED0A7B7D4D25C601E996C /* libPods-PIImageDoodler.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +101,7 @@
 				5857BCE118C99AC200796BDC /* XCTest.framework in Frameworks */,
 				5857BCE318C99AC200796BDC /* UIKit.framework in Frameworks */,
 				5857BCE218C99AC200796BDC /* Foundation.framework in Frameworks */,
+				D38FF9AC411B2BB11A4B33B6 /* libPods-PIImageDoodlerTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +115,7 @@
 				5857BCE618C99AC200796BDC /* PIImageDoodlerTests */,
 				5857BCC018C99AC200796BDC /* Frameworks */,
 				5857BCBF18C99AC200796BDC /* Products */,
+				F9076B6949B8C300AA198E24 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,6 +136,8 @@
 				5857BCC318C99AC200796BDC /* CoreGraphics.framework */,
 				5857BCC518C99AC200796BDC /* UIKit.framework */,
 				5857BCE018C99AC200796BDC /* XCTest.framework */,
+				2ACF587962F94A7B0DF1CAC5 /* libPods-PIImageDoodler.a */,
+				16BAEBC926D69C43AAE7288C /* libPods-PIImageDoodlerTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -129,7 +145,12 @@
 		5857BCC718C99AC200796BDC /* PIImageDoodler */ = {
 			isa = PBXGroup;
 			children = (
-				5857BD1018C9BC3400796BDC /* Drawing */,
+				8BB4836F1ECEB1C90001774B /* CommonFolder */,
+				8BB483751ECEB1C90001774B /* ControllerLayer */,
+				8BB483761ECEB1C90001774B /* ModelLayer */,
+				8BB483771ECEB1C90001774B /* NetworkLayer */,
+				8BB483781ECEB1C90001774B /* Resources */,
+				8BB483791ECEB1C90001774B /* ViewLayer */,
 				5857BCD018C99AC200796BDC /* PIAppDelegate.h */,
 				5857BCD118C99AC200796BDC /* PIAppDelegate.m */,
 				5857BCD618C99AC200796BDC /* PIViewController.h */,
@@ -170,19 +191,163 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5857BD1018C9BC3400796BDC /* Drawing */ = {
+		8BB4836F1ECEB1C90001774B /* CommonFolder */ = {
 			isa = PBXGroup;
 			children = (
-				5857BCFA18C9A10B00796BDC /* PIDrawerViewController.h */,
-				5857BCFB18C9A10B00796BDC /* PIDrawerViewController.m */,
-				5857BCFC18C9A10B00796BDC /* PIDrawerViewController.xib */,
-				5857BCFF18C9A32E00796BDC /* PIDrawerView.h */,
-				5857BD0018C9A32E00796BDC /* PIDrawerView.m */,
-				5857BD0A18C9BC2000796BDC /* PIColorPickerController.h */,
-				5857BD0B18C9BC2000796BDC /* PIColorPickerController.m */,
-				5857BD0C18C9BC2000796BDC /* PIColorPickerController.xib */,
+				8BB483701ECEB1C90001774B /* Categories */,
+				8BB483711ECEB1C90001774B /* Constants */,
+				8BB483721ECEB1C90001774B /* Extensions */,
+				8BB483731ECEB1C90001774B /* Helpers */,
+				8BB483741ECEB1C90001774B /* OpenSource */,
 			);
-			name = Drawing;
+			path = CommonFolder;
+			sourceTree = "<group>";
+		};
+		8BB483701ECEB1C90001774B /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		8BB483711ECEB1C90001774B /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		8BB483721ECEB1C90001774B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8BB483731ECEB1C90001774B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8BB483741ECEB1C90001774B /* OpenSource */ = {
+			isa = PBXGroup;
+			children = (
+				8BB4838D1ECEB2910001774B /* MBProgressHUD */,
+			);
+			path = OpenSource;
+			sourceTree = "<group>";
+		};
+		8BB483751ECEB1C90001774B /* ControllerLayer */ = {
+			isa = PBXGroup;
+			children = (
+				8BB483811ECEB2810001774B /* ColorPickerScreen */,
+				8BB483851ECEB2810001774B /* DrawingScreen */,
+			);
+			path = ControllerLayer;
+			sourceTree = "<group>";
+		};
+		8BB483761ECEB1C90001774B /* ModelLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModelLayer;
+			sourceTree = "<group>";
+		};
+		8BB483771ECEB1C90001774B /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		8BB483781ECEB1C90001774B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8BB483791ECEB1C90001774B /* ViewLayer */ = {
+			isa = PBXGroup;
+			children = (
+				8BB4837A1ECEB1C90001774B /* CollectionViewCells */,
+				8BB4837B1ECEB1C90001774B /* CustomViews */,
+				8BB4837C1ECEB1C90001774B /* TableViewCells */,
+			);
+			path = ViewLayer;
+			sourceTree = "<group>";
+		};
+		8BB4837A1ECEB1C90001774B /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		8BB4837B1ECEB1C90001774B /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				8BB4837D1ECEB2770001774B /* DrawingView */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		8BB4837C1ECEB1C90001774B /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		8BB4837D1ECEB2770001774B /* DrawingView */ = {
+			isa = PBXGroup;
+			children = (
+				8BB4837E1ECEB2770001774B /* PIDrawerView.h */,
+				8BB4837F1ECEB2770001774B /* PIDrawerView.m */,
+			);
+			path = DrawingView;
+			sourceTree = "<group>";
+		};
+		8BB483811ECEB2810001774B /* ColorPickerScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8BB483821ECEB2810001774B /* PIColorPickerController.h */,
+				8BB483831ECEB2810001774B /* PIColorPickerController.m */,
+				8BB483841ECEB2810001774B /* PIColorPickerController.xib */,
+			);
+			path = ColorPickerScreen;
+			sourceTree = "<group>";
+		};
+		8BB483851ECEB2810001774B /* DrawingScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8BB483861ECEB2810001774B /* PIDrawerViewController.h */,
+				8BB483871ECEB2810001774B /* PIDrawerViewController.m */,
+				8BB483881ECEB2810001774B /* PIDrawerViewController.xib */,
+			);
+			path = DrawingScreen;
+			sourceTree = "<group>";
+		};
+		8BB4838D1ECEB2910001774B /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				8BB4838E1ECEB2910001774B /* MBProgressHUD.h */,
+				8BB4838F1ECEB2910001774B /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		F9076B6949B8C300AA198E24 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				823565D926152E5B913D5FAC /* Pods-PIImageDoodler.debug.xcconfig */,
+				5DDD766E8F272F9823941363 /* Pods-PIImageDoodler.release.xcconfig */,
+				FD7C737E3EBB6CEDC83C6B73 /* Pods-PIImageDoodlerTests.debug.xcconfig */,
+				CF0250BE7BCE7F73BE3914AE /* Pods-PIImageDoodlerTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,9 +357,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5857BCF018C99AC200796BDC /* Build configuration list for PBXNativeTarget "PIImageDoodler" */;
 			buildPhases = (
+				90CB09E7D7BCFFCA75CB6D2C /* [CP] Check Pods Manifest.lock */,
 				5857BCBA18C99AC200796BDC /* Sources */,
 				5857BCBB18C99AC200796BDC /* Frameworks */,
 				5857BCBC18C99AC200796BDC /* Resources */,
+				FD95B7EB5E2A3DE2E6E09CEA /* [CP] Embed Pods Frameworks */,
+				F7D86A64CDAA5D62C404483C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -209,9 +377,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5857BCF318C99AC200796BDC /* Build configuration list for PBXNativeTarget "PIImageDoodlerTests" */;
 			buildPhases = (
+				41352AE6E27F432F491E962F /* [CP] Check Pods Manifest.lock */,
 				5857BCDB18C99AC200796BDC /* Sources */,
 				5857BCDC18C99AC200796BDC /* Frameworks */,
 				5857BCDD18C99AC200796BDC /* Resources */,
+				021FC21F8E859CEECC403DB8 /* [CP] Embed Pods Frameworks */,
+				2B8469008D463F8CF7AE2ADE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -233,6 +404,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Pavan Itagi";
 				TargetAttributes = {
+					5857BCBD18C99AC200796BDC = {
+						DevelopmentTeam = PYR923S5V2;
+					};
 					5857BCDE18C99AC200796BDC = {
 						TestTargetID = 5857BCBD18C99AC200796BDC;
 					};
@@ -264,8 +438,8 @@
 			files = (
 				5857BCDA18C99AC200796BDC /* Images.xcassets in Resources */,
 				5857BCF918C99F0800796BDC /* PIViewController.xib in Resources */,
-				5857BD0E18C9BC2000796BDC /* PIColorPickerController.xib in Resources */,
-				5857BCFE18C9A10B00796BDC /* PIDrawerViewController.xib in Resources */,
+				8BB4838C1ECEB2810001774B /* PIDrawerViewController.xib in Resources */,
+				8BB4838A1ECEB2810001774B /* PIColorPickerController.xib in Resources */,
 				5857BCCC18C99AC200796BDC /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,17 +454,111 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		021FC21F8E859CEECC403DB8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PIImageDoodlerTests/Pods-PIImageDoodlerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2B8469008D463F8CF7AE2ADE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PIImageDoodlerTests/Pods-PIImageDoodlerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41352AE6E27F432F491E962F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		90CB09E7D7BCFFCA75CB6D2C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F7D86A64CDAA5D62C404483C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PIImageDoodler/Pods-PIImageDoodler-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD95B7EB5E2A3DE2E6E09CEA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PIImageDoodler/Pods-PIImageDoodler-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5857BCBA18C99AC200796BDC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5857BCFD18C9A10B00796BDC /* PIDrawerViewController.m in Sources */,
+				8BB4838B1ECEB2810001774B /* PIDrawerViewController.m in Sources */,
 				5857BCCE18C99AC200796BDC /* main.m in Sources */,
 				5857BCD818C99AC200796BDC /* PIViewController.m in Sources */,
-				5857BD0118C9A32E00796BDC /* PIDrawerView.m in Sources */,
-				5857BD0D18C9BC2000796BDC /* PIColorPickerController.m in Sources */,
+				8BB483891ECEB2810001774B /* PIColorPickerController.m in Sources */,
+				8BB483801ECEB2770001774B /* PIDrawerView.m in Sources */,
 				5857BCD218C99AC200796BDC /* PIAppDelegate.m in Sources */,
+				8BB483901ECEB2910001774B /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,14 +674,16 @@
 		};
 		5857BCF118C99AC200796BDC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 823565D926152E5B913D5FAC /* Pods-PIImageDoodler.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = PYR923S5V2;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PIImageDoodler/PIImageDoodler-Prefix.pch";
 				INFOPLIST_FILE = "PIImageDoodler/PIImageDoodler-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -422,14 +692,16 @@
 		};
 		5857BCF218C99AC200796BDC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DDD766E8F272F9823941363 /* Pods-PIImageDoodler.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = PYR923S5V2;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PIImageDoodler/PIImageDoodler-Prefix.pch";
 				INFOPLIST_FILE = "PIImageDoodler/PIImageDoodler-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -438,6 +710,7 @@
 		};
 		5857BCF418C99AC200796BDC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD7C737E3EBB6CEDC83C6B73 /* Pods-PIImageDoodlerTests.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PIImageDoodler.app/PIImageDoodler";
@@ -461,6 +734,7 @@
 		};
 		5857BCF518C99AC200796BDC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF0250BE7BCE7F73BE3914AE /* Pods-PIImageDoodlerTests.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PIImageDoodler.app/PIImageDoodler";
@@ -497,6 +771,7 @@
 				5857BCF218C99AC200796BDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5857BCF318C99AC200796BDC /* Build configuration list for PBXNativeTarget "PIImageDoodlerTests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +780,7 @@
 				5857BCF518C99AC200796BDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

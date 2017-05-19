@@ -13,6 +13,8 @@
     CGPoint previousPoint;
     CGPoint currentPoint;
 }
+
+
 @property (nonatomic, strong) UIImage * viewImage;
 @end
 
